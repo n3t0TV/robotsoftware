@@ -1,0 +1,22 @@
+---
+string Imei
+string Iccid
+float64 Latitude
+string LatHemisphere
+float64 Longitude
+string LonHemisphere
+float64 Altitude
+float64 Accuracy
+string UTCTime
+string UTCDate
+int32 Satellites
+int32 Sim
+int32 rssi
+int32 moduleConnected
+int32 gpsOn
+bool gpsValid
+int32 rssiDBM
+int32 rssiPercentage
+string provider
+string accessTechnology
+string band

@@ -1,0 +1,4 @@
+string node_id
+string mqtt_topic
+---
+bool subscription_success

@@ -1,0 +1,135 @@
+{
+  "OTA": [
+    {
+      "icon": "fa-scanner",
+      "description": "vehicle_version_node",
+      "id": "vehicle_version_node"
+    },
+    {
+      "icon": "fa-tasks",
+      "description": "mqtt_manager_node",
+      "id": "mqtt_manager_node"
+    }
+  ],
+  "Modules": [
+    {
+      "icon": "fa-computer-classic",
+      "description": "state_machine_node",
+      "id": "state_machine_node"
+    },
+    {
+      "icon": "fa-heartbeat",
+      "description": "mqtt_heartbeat_node",
+      "id": "mqtt_heartbeat_node"
+    },
+    {
+      "icon": "fa-gamepad",
+      "description": "control_socket_node",
+      "id": "control_socket_node"
+    },
+    {
+      "icon": "fa-sensor-smoke",
+      "description": "sensor_socket_node",
+      "id": "sensor_socket_node"
+    },
+    {
+      "icon": "fa-globe",
+      "description": "rtc_node",
+      "id": "rtc_node"
+    },
+    {
+      "icon": "fa-motorcycle",
+      "description": "muscles_control_node",
+      "id": "muscles_control_node"
+    }
+  ],
+  "Drivers": [
+    {
+      "icon": "fa-user-secret",
+      "description": "spi_node",
+      "id": "spi_node"
+    },
+    {
+      "icon": "fa-cube",
+      "description": "i2c_node",
+      "id": "i2c_node"
+    },
+    {
+      "icon": "fa-usb-drive",
+      "description": "vehicle_drivers_node",
+      "id": "vehicle_drivers_node"
+    },
+    {
+      "icon": "fa-lightbulb-on",
+      "description": "light_node",
+      "id": "light_node"
+    },
+    {
+      "icon": "fa-people-carry",
+      "description": "motion_node",
+      "id": "motion_node"
+    },
+    {
+      "icon": "fa-arrows",
+      "description": "imu_spi_node",
+      "id": "imu_spi_node"
+    },
+    {
+      "icon": "fa-map-marked-alt",
+      "description": "gps_node",
+      "id": "gps_node"
+    },
+    {
+      "icon": "fa-microchip",
+      "description": "picmanager_node",
+      "id": "picmanager_node"
+    },
+    {
+      "icon": "fa-server",
+      "description": "servo_node",
+      "id": "servo_node"
+    },
+    {
+      "icon": "fa-telescope",
+      "description": "camera_exposure_node",
+      "id": "camera_exposure_node"
+    },
+    {
+      "icon": "fa-exclamation-triangle",
+      "description": "exception_node",
+      "id": "exception_node"
+    },
+    {
+      "icon": "fa-speakers",
+      "description": "speaker_node",
+      "id": "speaker_node"
+    },
+    {
+      "icon": "fa-wave-square",
+      "description": "pwm_node",
+      "id": "pwm_node"
+    },
+    {
+      "icon": "fa-head-side-headphones",
+      "description": "ble_node",
+      "id": "ble_node"
+    }
+  ],
+  "Vision": [
+    {
+      "icon": "fa-search-plus",
+      "description": "brain_vision_zoom",
+      "id": "brain_vision_zoom"
+    },
+    {
+      "icon": "fa-camera",
+      "description": "brain_vision_front",
+      "id": "brain_vision_front"
+    },
+    {
+      "icon": "fa-video",
+      "description": "brain_vision_spin",
+      "id": "brain_vision_spin"
+    }
+  ]
+}

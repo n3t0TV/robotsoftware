@@ -1,0 +1,5 @@
+<launch>
+	<node name="spi_node" pkg="communication" type="spi_node" launch-prefix="gdb -ex run --args" output="screen">
+        <param name="~log_level" value="0" />
+    </node>
+</launch>

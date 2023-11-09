@@ -1,0 +1,9 @@
+<launch>
+	<!-- <arg name="isJetson" default="$(eval env('HOME')=='/home/jetson')"/> -->
+
+	<node name="joystick_node" pkg="joystick" type="joystick_generic_node" output="screen">
+		<param name="~log_level" value="1" />
+		<param name="~pump_e_stop" value="true" />
+	</node>
+
+</launch>

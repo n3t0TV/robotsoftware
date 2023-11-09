@@ -1,0 +1,11 @@
+bool DriveBrakes
+int32 DriveSpeed
+int32 DriveSpeedCurr
+float32 DriveAngularRate
+float32 DriveAngularRateCurr
+int32 DriveSpeedRight
+int32 DriveSpeedRightCurr
+int32 DriveSpeedLeft
+int32 DriveSpeedLeftCurr
+int32 DriveAngle
+int32 DriveAngleCurr

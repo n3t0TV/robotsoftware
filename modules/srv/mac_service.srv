@@ -1,0 +1,4 @@
+string mac_to_save
+---
+string mac
+bool success

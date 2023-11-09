@@ -1,0 +1,10 @@
+int32 PoleState
+int32 ReverseState
+int32 StopState
+int32 HeadState
+int32 HeadPWMDuty
+int32 TailState
+int32 BlinkerState
+int32 BatteryState
+int32 IlluminationFPWMDuty
+int32 IlluminationRPWMDuty

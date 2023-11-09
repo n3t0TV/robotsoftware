@@ -1,0 +1,20 @@
+{
+  "ORIENT_YAW": { "SET":0, "GET":4801, "DATA TYPE":"float", "MIN":0, "MAX":360, "COMMANDTYPE":0},
+  "ORIENT_ROLL": { "SET":0, "GET":4803, "DATA TYPE":"float", "MIN":-180, "MAX":180, "COMMANDTYPE":0},
+  "ORIENT_PITCH": { "SET":0, "GET":4805, "DATA TYPE":"float", "MIN":-180, "MAX":180, "COMMANDTYPE":0},
+  "LIN_ACC_X": { "SET":0, "GET":4807, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "LIN_ACC_Y": { "SET":0, "GET":4809, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "LIN_ACC_Z": { "SET":0, "GET":4811, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "LIN_ACC_RAW_X": { "SET":0, "GET":4819, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "LIN_ACC_RAW_Y": { "SET":0, "GET":4821, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "LIN_ACC_RAW_Z": { "SET":0, "GET":4823, "DATA TYPE":"float", "MIN":-4, "MAX":4, "COMMANDTYPE":0},
+  "ANG_VEL_X": { "SET":0, "GET":4825, "DATA TYPE":"float", "MIN":-2000, "MAX":2000, "COMMANDTYPE":0},
+  "ANG_VEL_Y": { "SET":0, "GET":4827, "DATA TYPE":"float", "MIN":-2000, "MAX":2000, "COMMANDTYPE":0},
+  "ANG_VEL_Z": { "SET":0, "GET":4829, "DATA TYPE":"float", "MIN":-2000, "MAX":2000, "COMMANDTYPE":0},
+  "MAGNET_X": { "SET":0, "GET":4831, "DATA TYPE":"float", "MIN":-17, "MAX":17, "COMMANDTYPE":0},
+  "MAGNET_Y": { "SET":0, "GET":4833, "DATA TYPE":"float", "MIN":-17, "MAX":17, "COMMANDTYPE":0},
+  "MAGNET_Z": { "SET":0, "GET":4835, "DATA TYPE":"float", "MIN":-17, "MAX":17, "COMMANDTYPE":0},
+  "MAG_X_OFFSET": { "SET":4862, "GET":4863, "DATA TYPE":"accum", "MIN":-8, "MAX":8, "COMMANDTYPE":0},
+  "MAG_Y_OFFSET": { "SET":4864, "GET":4865, "DATA TYPE":"accum", "MIN":-8, "MAX":8, "COMMANDTYPE":0},
+  "MAG_Z_OFFSET": { "SET":4866, "GET":4867, "DATA TYPE":"accum", "MIN":-8, "MAX":8, "COMMANDTYPE":0}
+}

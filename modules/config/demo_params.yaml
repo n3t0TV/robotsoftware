@@ -1,0 +1,23 @@
+mqtt:
+  client:
+    client_id: "$YOUR_CLIENT_ID"
+    protocol: 4 # MQTTv311
+  connection:
+    host: $YOUR_MQTT_SANBOX_BROKER
+    port: 8883
+    keepalive: 5
+  private_path: mqtt_debug
+  account:
+    username: "$YOUR_MQTT_USER"
+    password: $YOUR_MQTT_PASS
+serializer: json:dumps
+deserializer: json:loads
+bridge:
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: modules.msg:joystick_msg
+    topic_from: /control_topic
+    topic_to: ~/control
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: modules.msg:sensor_msg
+    topic_from: /sensor_topic
+    topic_to: ~/sensor

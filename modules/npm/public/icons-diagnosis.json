@@ -1,0 +1,41 @@
+{
+  "GPS": [
+    {
+      "icon": "fa-satellite",
+      "description": "GPS session is on.",
+      "id": "gpsSession"
+    },
+    {
+      "icon": "fa-search-location",
+      "description": "GPS fixed with enough satellites.",
+      "id": "fixed"
+    },
+    {
+      "icon": "fa-sim-card",
+      "description": "SIM card inserted",
+      "id": "sim"
+    }
+  ],
+  "Control": [
+    {
+      "icon": "fa-microchip",
+      "description": "Pic error",
+      "id": "spi-error"
+    },
+    {
+      "icon": "fa-paw-claws",
+      "description": "Kangaroo error",
+      "id": "kangaroo-error"
+    },
+    {
+      "icon": "fa-brain",
+      "description": "Brain error",
+      "id": "brain-error"
+    },
+    {
+      "icon": "fa-gamepad-alt",
+      "description": "Teleop error",
+      "id": "teleop-error"
+    }
+  ]
+}

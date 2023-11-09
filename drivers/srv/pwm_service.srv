@@ -1,0 +1,6 @@
+uint8 channel
+uint16 onTime
+uint16 offTime
+uint16 pwmDuty
+---
+bool success

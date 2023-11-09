@@ -1,0 +1,48 @@
+<head>
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/a3cc4da369.js" crossorigin="anonymous" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../dashboard.js"></script>
+</head>
+<body>
+    <div id="viewport">
+        <!-- Left Sidebar -->
+        <div class="sidebar sidebar-left">
+            <header>
+                <a>Diagnosis</a>
+            </header>
+            <ul>
+                <li>
+                    <a id="tag-gps" class="clickable">GPS</a>
+                </li>
+                <li>
+                    <a id="tag-control" class="clickable">Control</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="sidebar sidebar-right" >
+            <header>
+                <a>Nodes</a>
+            </header>
+            <table id="nodes_table"></table>
+        </div>
+        <!-- Header -->
+        <!-- <div>
+            <div class="container">
+                <h3 id="content-header"></h3>
+                <img src="./tortoisecircle.svg" alt="" width="40" height="40" class="d-inline-block align-text-top">
+            </div>
+        </div> -->
+        <!-- Content -->
+        <div class="row container-fluid content-body">
+            <table id="icons_table"></table>
+        </div>
+        
+    </div>
+    <!-- <script src="../dashboard.js"></script> -->
+</body>

@@ -1,0 +1,3 @@
+bool autopilot_enable
+---
+bool success

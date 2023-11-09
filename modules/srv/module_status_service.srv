@@ -1,0 +1,7 @@
+---
+string imei
+bool status
+bool sim
+float64 latitude
+float64 longitude
+int32 rssi

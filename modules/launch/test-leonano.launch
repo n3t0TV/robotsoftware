@@ -1,0 +1,38 @@
+<launch>
+  <!-- The arguments modules_path and catkin_src are used to determine if
+       the modules package is running from the catkin development workspace -->
+  <arg name="modules_path" value="$(find modules)" />
+  <arg name="catkin_src" value="/catkin_ws/src" />
+
+  <node name="mqtt_heartbeat_node" pkg="modules" type="mqtt_heartbeat_node">
+    <param name="~log_level" value="3" />
+  </node>
+
+  <node name="control_socket_node" pkg="modules" type="control_socket_node" output="screen">
+    <param name="~log_level" value="3" />
+  </node>
+
+  <node name="sensor_socket_node" pkg="modules" type="sensor_socket_node">
+    <param name="~log_level" value="3" />
+  </node>
+
+  <!-- If the modules package is running from the catkin development workspace,
+       run the JS nodes from the javascript executables else if the modules
+       package is running from /opt/ros, run from the binaries generated -->
+  <arg name="control_qr_type" value="$(eval 'controlqr.js' if (modules_path.find(catkin_src) != -1) else 'controlqr')" />
+
+  <node name="control_qr_node" pkg="modules" type="$(arg control_qr_type)" output="screen" respawn="true" respawn_delay="10">
+    <param name="~log_level" value="debug" />
+    <param name="~headless" value="false" />
+    <param name="~joyBroadcastUrl" value="https://teleop.tortops.com/dashboard/groupbroadcast?imei=" />
+  </node>
+
+  <node name="muscles_control_node" pkg="modules" type="muscles_control_node" output="screen">
+    <param name="~log_level" value="3" />
+  </node>
+
+  <node name="navigation_control_node" pkg="modules" type="navigation_control_node" output="screen">
+    <param name="~log_level" value="0" />
+  </node>
+
+</launch>

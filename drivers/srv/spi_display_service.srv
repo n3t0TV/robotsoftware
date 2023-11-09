@@ -1,0 +1,5 @@
+char[] write_buffer
+int32 buffer_len
+bool data_command
+---
+char[] read_buffer

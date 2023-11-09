@@ -1,0 +1,98 @@
+<launch>
+    <arg name="isJetson" default="$(eval env('HOME')=='/home/jetson')"/>
+    <!-- The arguments drivers_path and catkin_src are used to determine if
+       the drivers package is running from the catkin development workspace -->
+    <arg name="drivers_path" value="$(find drivers)" />
+    <arg name="catkin_src" value="/catkin_ws/src" />
+
+    <node name="spi_node" pkg="communication" type="spi_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node if="$(arg isJetson)" name="i2c_node" pkg="communication" type="i2c_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node name="uart_node" pkg="communication" type="uart_node" output="screen">
+        <param name="~log_level" value="0" />
+    </node>
+
+    <node name="vehicle_drivers_node" pkg="drivers" type="vehicle_drivers_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node name="light_node" pkg="drivers" type="light_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node name="motion_node" pkg="drivers" type="motion_node">
+        <param name="~log_level" value="3" />
+        <param name="~right/kp" value="0.99999" />
+        <param name="~right/ki" value="0.35" />
+        <param name="~right/kd" value="0" />
+        <param name="~left/kp" value="0.99999" />
+        <param name="~left/ki" value="0.35" />
+        <param name="~left/kd" value="0" />
+    </node>
+
+    <node name="imu_spi_node" pkg="drivers" type="imu_spi_node">
+        <param name="~log_level" value="3" />
+        <param name="~samples" value="0" />
+    </node>
+
+    <node name="picmanager_node" pkg="drivers" type="picmanager_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node name="servo_node" pkg="drivers" type="servo_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node unless="$(arg isJetson)" name="camera_exposure_node" pkg="drivers" type="camera_exposure_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node name="exception_node" pkg="drivers" type="exception_node" output="screen">
+        <param name="~log_level" value="0" />
+    </node>
+
+    <node name="audio_player_node" pkg="drivers" type="audio_player_node" output="screen">
+        <param name="~log_level" value="1" />
+    </node>
+
+    <node name="tts_node" pkg="drivers" type="tts_node" output="screen">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <!-- If the drivers package is running from the catkin development
+       workspace, run the javascript executables else if the drivers
+       package is running from /opt/ros, run the binaries generated -->
+    <arg name="speech_type" value="$(eval 'speech.js' if (drivers_path.find(catkin_src) != -1) else 'speech')" />
+
+    <node name="speech_recognize_node" pkg="drivers" type="$(arg speech_type)" output="screen" respawn="true" respawn_delay="10">
+        <param name="~log_level" value="debug" />
+        <param name="~package_path" value="$(arg drivers_path)" />
+    </node>
+
+    <node if="$(arg isJetson)" name="pwm_node" pkg="drivers" type="pwm_node">
+        <param name="~log_level" value="3" />
+    </node>
+
+    <node unless="$(arg isJetson)" name="gps_node_A" pkg="drivers" type="gps_node">
+        <param name="~log_level" value="3" />
+        <param name="~serial_port" value="/dev/ttyUSB2" />
+    </node>
+
+    <include if="$(arg isJetson)" file="$(find drivers)/launch/test_gps.launch" />
+
+    <node name="ble_node_1" pkg="drivers" type="ble_node" output="screen" respawn="true" respawn_delay="10">
+        <param name="~container_id" value="1" />
+        <param name="~log_level" value="0" />
+    </node>
+
+    <node name="ble_node_2" pkg="drivers" type="ble_node" output="screen" respawn="true" respawn_delay="10">
+        <param name="~container_id" value="2" />
+        <param name="~log_level" value="0" />
+    </node>
+
+</launch>

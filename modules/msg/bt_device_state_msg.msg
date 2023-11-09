@@ -1,0 +1,2 @@
+string mac
+bool connected

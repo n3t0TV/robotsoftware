@@ -1,0 +1,7 @@
+tls:
+  ca_certs: /home/pi/braintemp/letsencrypt.pem
+  cert_reqs: 1 
+  ciphers: "ECDHE-RSA-AES256-GCM-SHA384"
+  tls_insecure: false
+
+  

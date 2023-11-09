@@ -1,0 +1,11 @@
+string Version
+int32 BatteryLevel
+float32 BatteryVoltage
+bool Charging
+int32 WagonError1
+int32 WagonError2
+int32 WagonSensor
+int32 WagonDriveRightError
+int32 WagonDriveLeftError
+bool WagonFailSafeMode
+bool WagonFailSafeRelease

@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  padding-left: 60px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+  z-index: 1000;
+  position: fixed;
+  width: 150px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: #f9fbfb;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar-left {
+  left: 230px;
+}
+
+.sidebar-right {
+  right: 0px;
+  width: 315px;
+}
+
+.sidebar header {
+  background-color: #f1f5f7;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.sidebar header a {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.table-header {
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+  color: black;
+  /* display: block; */
+  /* text-decoration: none; */
+}
+
+.table-subheader {
+  font-size: 18px;
+  padding: 5px;
+  font-weight: normal;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* Content Styles */
+td {
+  /* border: 1px solid black; */
+  padding: 7px;
+  width: 65px;
+  text-align: center;
+}
+
+.content-body {
+  padding-left: 110px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.clickable {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  background-color: #f1f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  max-width: 840px;
+  margin-left: 70px;
+}

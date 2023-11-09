@@ -1,0 +1,10 @@
+int32 status
+string servidor
+int32 control
+int32 sensores
+int32 video
+int32 id
+int32 latency
+int32 id_sesion_teleop
+string url_servidor
+string source

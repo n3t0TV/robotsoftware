@@ -1,0 +1,11 @@
+mqtt:
+  client:
+    protocol: 4 # MQTTv311
+  connection:
+    host: $YOUR_MQTT_BROKER
+    port: 8883
+    keepalive: 30
+  account:
+    password: $YOUR_PASSWORD
+serializer: json:dumps
+deserializer: json:loads

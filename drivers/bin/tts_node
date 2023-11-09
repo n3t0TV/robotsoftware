@@ -1,0 +1,6 @@
+#! /usr/bin/env python
+
+import tts.tts_node
+
+if __name__ == '__main__':
+    tts.tts_node.main()

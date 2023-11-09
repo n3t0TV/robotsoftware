@@ -1,0 +1,4 @@
+bool publish_status
+bool connection_status
+int32 publication_id
+int32 disconnection_error

@@ -1,0 +1,13 @@
+---
+int32 battery
+int32 currentSpeed
+int32 desiredSpeed
+int32 currentAngle
+int32 desiredAngle
+float32 yaw
+string firmware_version
+bool brake
+int32 turningLights
+int32 illumination
+bool picOK
+string brain_version

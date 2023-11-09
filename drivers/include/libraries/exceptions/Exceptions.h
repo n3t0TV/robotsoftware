@@ -1,0 +1,41 @@
+/*
+ * Defines for exceptions
+ * 
+ * */
+
+//General for UI
+#define EXCEPTION_STATUS_OK 	100
+#define EXCEPTION_UART_KANGAROO 101
+#define EXCEPTION_SPI_COM       102
+#define EXCEPTION_BRAIN_INTRN   103
+#define EXCEPTION_TELEOP_COM    104
+
+//Internal flags for brain
+#define STATUS_OK 			0
+#define FLAG_UART_KANGAROO 	0b00000001
+#define FLAG_SPI_COM       	0b00000010
+#define FLAG_BRAIN_INTRN   	0b00000100
+#define FLAG_TELEOP_COM    	0b00001000
+#define FLAG_DRIVES     	0b00010000
+#define FLAG_SAFE_MODE     	0b00100000
+#define FLAG_SAFE_RELEASE   0b01000000
+
+//From Pic
+#define PIC_ERR_SYS 	0b00000001
+#define	PIC_ERR_DRV_L 	0b00000010
+#define	PIC_ERR_DRV_R	0b00000100
+
+//From Pic Drive
+#define PIC_ERR_DRV_CNTRL 	0x00000008
+#define PIC_ERR_DRV_T_OUT 	0x00000040
+#define PIC_ERR_DRV_COM 	0x00000080
+#define PIC_ERR_DRV_S_LOST 	0x00000100
+#define MC_ERR_COMM         0x00080000
+#define MC_ERR_CURR_DIFF 	0x00400000
+#define MC_ERR_CURR_LIMIT 	0x00800000
+#define MC_ERR_QEB 	        0x20000000
+#define MC_ERR_QEA 	        0x40000000
+
+//From SPI Comm
+#define SPI_ERR_NODE		0b00000001
+#define	SPI_ERR_NO_COM	 	0b00000010

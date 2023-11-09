@@ -1,0 +1,19 @@
+---
+bool module_connected
+bool module_sim
+bool module_gps
+bool camera_front
+bool camera_back
+bool performance_status
+bool heartbeat_status
+bool manager_publish_status
+bool manager_connection_status
+int32 manager_publication_id
+int32 manager_disconnection_error
+bool videoClientConnection
+bool videoImageSent
+bool sensorClientConnection
+bool sensorBufferSent
+bool controlClientConnection
+bool controlBufferReceived
+int32 rssi

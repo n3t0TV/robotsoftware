@@ -1,0 +1,21 @@
+<launch>
+	<arg name="isJetson" default="$(eval env('HOME')=='/home/jetson')"/>
+	<param name="running_source" value="$(optenv BRAIN_DEVELOP false)" />
+
+	<include file="$(find joystick)/launch/test_joystick.launch" />
+
+	<node name="vehicle_version_node" pkg="ota" type="vehicle_version_node">
+		<param name="~log_level" value="3" />
+	</node>
+
+	<node name="mqtt_manager_node" pkg="ota" type="mqtt_manager_node" output="screen">
+		<param name="mqtt_host" value="vehicle.tortops.com" />
+		<param name="~log_level" value="0" />
+		<param name="~macqtt" value="0" />
+	</node>
+
+	<include file="$(find modules)/launch/test-leonano.launch" />
+	<include pass_all_args="true" file="$(find drivers)/launch/test_wagon_drivers.launch" />
+
+	
+</launch>

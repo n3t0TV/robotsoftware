@@ -1,0 +1,17 @@
+string instructionName
+string command
+int32 Reset
+int32 TurningLights
+int32 Illumination
+int32 beepMode
+string mp3Id
+int32 positionUploadStatus
+int32 positionInterval
+int32 sensorUploadStatus
+int32 sensorInterval
+int32 heartbeatInterval
+int32 speedMode
+int32 lowSpeedLimit
+int32 mediumSpeedLimit
+int32 highSpeedLimit
+bool openContainers

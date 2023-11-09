@@ -1,0 +1,20 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "controlqr.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-bridge": "^2.1.0",
+    "jquery": "^3.6.0",
+    "jsdom": "^18.0.0",
+    "puppeteer": "^10.4.0",
+    "rosnodejs": "^3.0.2",
+    "socket.io": "^4.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
